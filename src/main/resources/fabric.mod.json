@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "isnomia",
+	"version": "${version}",
+	"name": "IsNOmia",
+	"description": "Reset insomnia for all online players after any player sleeps.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/isnomia/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"de.jagenka.IsNOmia"
+		],
+		"client": [
+		]
+	},
+	"mixins": [
+		"isnomia.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.9",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
