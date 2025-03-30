@@ -1,5 +1,6 @@
 package de.jagenka.mixin;
 
+import de.jagenka.IsNOmia;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.stat.Stats;
@@ -27,5 +28,6 @@ public class ServerWorldMixin
     private void resetInsomniaAfterSkippingNight(CallbackInfo info)
     {
         players.stream().toList().forEach(player -> player.resetStat(Stats.CUSTOM.getOrCreateStat(Stats.TIME_SINCE_REST)));
+        IsNOmia.LOGGER.info("Reset Insomnia for {} players.", players.size());
     }
 }
